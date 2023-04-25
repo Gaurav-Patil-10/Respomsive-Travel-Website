@@ -1,0 +1,36 @@
+// variables
+
+$header-height: 3rem;
+
+
+//colors  change favourite color to match images dark green -- 190 // green -- 171 // green blue -- 200
+$hue-color: 190;
+
+
+$first-color: hsl($hue-color , 64%, 22%);
+$first-color-second: hsl($hue-color , 64%, 22%);
+$first-color-alt: hsl($hue-color , 64%, 15%);
+$title-color: hsl($hue-color , 64%, 18%);
+$text-color: hsl($hue-color , 24%, 35%);
+$text-color-light: hsl($hue-color , 8%, 60%);
+$input-color: hsl($hue-color , 24%, 97%);
+$body-color: hsl($hue-color , 100%, 99%);
+$white-color: #FFF;
+$scroll-bar-color: hsl($hue-color , 12%, 90%);
+$scroll-thumb-color: hsl($hue-color , 12%, 75%);
+
+
+// fonts and typography
+$body-font: 'Open Sans' , sans-serif;
+$title-font: 'Raleway' , sans-serif ;
+$biggest-font-size: 2.5rem;
+$h1-font-size: 1.5rem ;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+// font weight
+$font-medium:;
+$font-semi-bold: ;
