@@ -71,7 +71,7 @@ input {
     margin-bottom: var(--mb-2);
 }
 
-.container {
+.container{
     max-width: 968px;
     margin-inline: $mb-1;
 }
@@ -79,4 +79,37 @@ input {
 .grid {
     display: grid;
     gap: 1.5rem;
+}
+
+.button{
+    display: inline-block;
+    background-color: $first-color;
+    color: $white-color;
+    padding: 1rem 2rem;
+    font-weight: $font-semi-bold;
+    transition: .3s;
+
+    &:hover{
+        background-color: $first-color-alt;
+    }
+
+    &--flex{
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+    }
+
+    &--link{
+        background: none;
+        padding: 0;
+
+        &:hover{
+            background: none;
+        }
+    }
+
+    
+
+
+
 }

@@ -4,7 +4,8 @@
     top: 0;
     left: 0;
     z-index: $z-fixed;
-    background-color: $first-color;
+    // background-color: $first-color;
+    background-color: transparent;
 }
 
 
@@ -84,3 +85,14 @@
 .show-menu{
     right: 0;
 }
+
+
+.scroll-header{
+    background-color: $body-color;
+    box-shadow: 0 0 4px hsla($hue-color, 64%, 15%, .15);
+
+    & .nav-logo , & .nav-toggle{
+        color: $title-color;
+    }
+}
+
