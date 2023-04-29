@@ -24,7 +24,8 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-
+    <!-- swiper cdn  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 </head>
 
@@ -119,10 +120,109 @@
 
             </div>
         </secion>
+
+        <!-- About -->
+
+        <section class="about section" id="about">
+            <div class="about-container container grid">
+                <div class="about-data">
+                    <h2 class="section-title about-title">
+                        More Information <br> About The Best Beaches
+                    </h2>
+                    <p class="about-description">
+                        You can find the most beautiful and pleasant places at the best prices with special discounts,
+                        you choose the place we will guide you all the way to wait, get your place now.
+                    </p>
+                    <a href="#" class="button">Reserve a place</a>
+                </div>
+
+                <div class="about-img">
+                    <div class="about-img-overlay">
+                        <img src="./img/about1.jpg" alt="about image one" class="about-img-1">
+                    </div>
+                    <div class="about-img-overlay">
+                        <img src="./img/about2.jpg" alt="about image two" class="about-img-2">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Discover -->
+        <section class="discover section" id="discover">
+            <h2 class="section-title">
+                Discover the most <br> attractive places
+            </h2>
+
+            <div class="discover-container container swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!--discover 1-->
+                    <div class="discover-card swiper-slide ">
+                        <img src="./img/discover1.jpg" alt="" class="discover-img">
+                        <div class="discover-data">
+                            <h2 class="discover-title">
+                                Bali
+                            </h2>
+                            <span class="discover-description">
+                                24 tours available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--discover 2-->
+                    <div class="discover-card swiper-slide">
+                        <img src="./img/discover2.jpg" alt="" class="discover-img">
+                        <div class="discover-data">
+                            <h2 class="discover-title">
+                                Hawaii
+                            </h2>
+                            <span class="discover-description">
+                                24 tours available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--discover 3-->
+                    <div class="discover-card swiper-slide">
+                        <img src="./img/discover3.jpg" alt="" class="discover-img">
+                        <div class="discover-data">
+                            <h2 class="discover-title">
+                                Hvar
+                            </h2>
+                            <span class="discover-description">
+                                18 tours available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--discover 4-->
+                    <div class="discover-card swiper-slide">
+                        <img src="./img/discover4.jpg" alt="" class="discover-img">
+                        <div class="discover-data">
+                            <h2 class="discover-title">
+                                Whitehaven
+                            </h2>
+                            <span class="discover-description">
+                                32 tours available
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 
     <!-- script  -->
     <script src="./main.js"></script>
+
+
 </body>
 
 </html>

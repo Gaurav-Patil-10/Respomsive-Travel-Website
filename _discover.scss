@@ -1,0 +1,50 @@
+.discover {
+
+    .swiper-slide{
+        width: 200px;
+    }
+
+    .swiper-wrapper{
+        margin-top: 2.5rem;
+    }
+
+    &-card{
+        position: relative;
+        width: 200px;
+        overflow: hidden;
+    }
+
+    &-data{
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1rem;
+    }
+
+    &-title{
+        color: $white-color;
+        font-size: var(--h3-font-size);
+        margin-bottom: $mb-0-25;
+    }
+
+    &-description{
+        color: $white-color;
+        display: block;
+        font-size: var(--smaller-font-size);
+    }
+
+    &-img{
+        transition: $img-transition;
+
+        &:hover{
+            transform: $img-scale;
+        }
+    }
+
+
+}
+
+
+.swiper-container-3d .swiper-slide-shadow-left ,
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}

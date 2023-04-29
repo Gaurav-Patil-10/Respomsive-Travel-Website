@@ -271,4 +271,75 @@ input {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.about-data {
+  text-align: center;
+  display: grid;
+  row-gap: 2.5rem;
+}
+.about-container {
+  row-gap: 2.5rem;
+}
+.about-description {
+  margin-bottom: 2rem;
+}
+.about-img {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-img-overlay {
+  overflow: hidden;
+}
+.about-img-1 {
+  width: 130px;
+  transition: 0.3s;
+}
+.about-img-2 {
+  width: 180px;
+  transition: 0.3s;
+}
+.about-img-1, .about-img-2 {
+  transform: scale(1.1);
+}
+
+.discover .swiper-slide {
+  width: 200px;
+}
+.discover .swiper-wrapper {
+  margin-top: 2.5rem;
+}
+.discover-card {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+}
+.discover-data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+.discover-title {
+  color: #FFF;
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+.discover-description {
+  color: #FFF;
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+.discover-img {
+  transition: 0.3s;
+}
+.discover-img:hover {
+  transform: scale(1.1);
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
 }/*# sourceMappingURL=styles.css.map */
