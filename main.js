@@ -60,3 +60,44 @@ var swiper = new Swiper(".discover-container", {
       rotate: 0,
     },
   });
+
+
+
+  // video
+
+  const videoFile = document.getElementById('video-file');
+        videoButton = document.getElementById('video-button');
+        videoIcon = document.getElementById('video-icon');
+
+  function playPause (){
+    if (videoFile.paused){
+
+        //play video
+        videoFile.play()
+
+        // we change the icon
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line');
+    } else {
+
+        // pause video
+        videoFile.pause()
+
+        // we change the icon
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line');
+    }
+  }
+
+  videoButton.addEventListener('click' , playPause);
+
+
+  function finalVideo(){
+    // video ends , icon change
+    videoIcon.classList.remove('ri-pause-line')
+    videoIcon.classList.add('ri-play-line')
+  }
+
+  // ended when the video ends
+
+  videoFile.addEventListener('ended',finalVideo);
