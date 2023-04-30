@@ -1,0 +1,82 @@
+.place {
+
+    &-card {
+        height: 230px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .place-img{
+            transform: $img-scale;
+        }
+    }
+
+    &-img {
+        height: 230px;
+        transition: $img-transition;
+    }
+
+    &-container {
+        grid-template-columns: repeat(2,max-content);
+        justify-content: center;
+    }
+
+    &-content , &-title{
+        color: $white-color;
+    }
+
+    &-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: .75rem .75rem 1rem;
+    }
+
+    &-rating{
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+
+        &-icon{
+            font-size: .75rem;
+            margin-right: $mb-0-25;
+        }
+
+        &-number{
+            font-size: var(--small-font-size);
+        }
+    }
+
+    &-title{
+        font-size: var(--h3-font-size);
+        margin-bottom: $mb-0-25;
+    }
+
+    &-subtitle{
+        display: block;
+        font-size: var(--smaller-font-size);
+        margin-bottom: $mb-1-25;
+    }
+
+    &-price{
+        display: block;
+    }
+
+
+    &-button{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: .75rem 1rem;
+    }
+
+    
+
+
+
+
+}
