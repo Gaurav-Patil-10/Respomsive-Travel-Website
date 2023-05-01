@@ -474,4 +474,103 @@ input {
   right: 0;
   bottom: 0;
   padding: 0.75rem 1rem;
+}
+
+.subscribe-bg {
+  background-color: hsl(190deg, 64%, 22%);
+  padding: 2.5rem 0;
+}
+.subscribe-title, .subscribe-description {
+  color: #FFF;
+}
+.subscribe-description {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.subscribe-form {
+  background-color: hsl(190deg, 24%, 97%);
+  padding: 0.5rem;
+  justify-content: space-between;
+  display: flex;
+}
+.subscribe-input {
+  width: 70%;
+  padding-right: 0.5rem;
+  background-color: hsl(190deg, 24%, 97%);
+  color: hsl(190deg, 24%, 35%);
+}
+.subscribe-input::-moz-placeholder {
+  color: hsl(190deg, 24%, 35%);
+}
+.subscribe-input:-ms-input-placeholder {
+  color: hsl(190deg, 24%, 35%);
+}
+.subscribe-input::placeholder {
+  color: hsl(190deg, 24%, 35%);
+}
+
+.sponsor-container {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  justify-items: center;
+  row-gap: 3.5rem;
+}
+.sponsor-img {
+  width: 90px;
+  filter: invert(0.7);
+  transition: 0.3s;
+}
+.sponsor-content:hover .sponsor-img {
+  filter: invert(0.5);
+}
+
+.footer-container {
+  row-gap: 5rem;
+}
+.footer-content {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+.footer-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+.footer-sub-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+.footer-description {
+  margin-bottom: 2rem;
+}
+.footer-social {
+  font-size: 1.25rem;
+  color: hsl(190deg, 64%, 18%);
+  margin-right: 1.25rem;
+}
+.footer-item {
+  margin-bottom: 0.75rem;
+}
+.footer-link {
+  color: hsl(190deg, 24%, 35%);
+}
+.footer-link:hover {
+  color: hsl(190deg, 64%, 18%);
+}
+.footer-rights {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+.footer-copy, .footer-terms-link {
+  font-size: var(--small-font-size);
+  color: hsl(190deg, 8%, 60%);
+}
+.footer-terms {
+  display: flex;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  justify-content: center;
+}
+.footer-terms:hover {
+  color: hsl(190deg, 24%, 35%);
 }/*# sourceMappingURL=styles.css.map */
