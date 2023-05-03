@@ -1,12 +1,12 @@
 .subscribe {
     &-bg {
-        background-color: $first-color-second;
+        background-color: var(--first-color-second);
         padding: 2.5rem 0;
     }
 
     &-title,
     &-description {
-        color: $white-color;
+        color: var(--white-color);
     }
 
     &-description {
@@ -15,7 +15,7 @@
     }
 
     &-form{
-        background-color: $input-color;
+        background-color: var(--input-color);
         padding: .5rem;
         justify-content: space-between;
         display: flex;
@@ -24,11 +24,11 @@
     &-input{
         width: 70%;
         padding-right: .5rem;
-        background-color: $input-color;
-        color: $text-color;
+        background-color: var(--input-color);
+        color: var(--text-color);
 
         &::placeholder{
-            color: $text-color;
+            color: var(--text-color);
         }
     }
 

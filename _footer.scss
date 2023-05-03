@@ -25,7 +25,7 @@
 
     &-social{
         font-size: 1.25rem;
-        color: $title-color;
+        color: var(--title-color);
         margin-right: $mb-1-25;
     }
 
@@ -34,10 +34,10 @@
     }
 
     &-link{
-        color: $text-color;
+        color: var(--text-color);
 
         &:hover{
-            color: $title-color;
+            color: var(--title-color);
         }
     }
 
@@ -50,7 +50,7 @@
 
     &-copy , &-terms-link{
         font-size: var(--small-font-size);
-        color: $text-color-light;
+        color: var(--text-color-light);
     }
 
     &-terms{
@@ -59,7 +59,7 @@
         justify-content: center;
 
         &:hover{
-            color: $text-color;
+            color: var(--text-color);
         }
     }
 

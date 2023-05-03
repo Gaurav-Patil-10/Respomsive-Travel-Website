@@ -1,41 +1,41 @@
 .discover {
 
-    .swiper-slide{
+    .swiper-slide {
         width: 200px;
     }
 
-    .swiper-wrapper{
+    .swiper-wrapper {
         margin-top: 2.5rem;
     }
 
-    &-card{
+    &-card {
         position: relative;
         width: 200px;
         overflow: hidden;
     }
 
-    &-data{
+    &-data {
         position: absolute;
         bottom: 1.5rem;
         left: 1rem;
     }
 
-    &-title{
-        color: $white-color;
+    &-title {
+        color: var(--white-color);
         font-size: var(--h3-font-size);
         margin-bottom: $mb-0-25;
     }
 
-    &-description{
-        color: $white-color;
+    &-description {
+        color: var(--white-color);
         display: block;
         font-size: var(--smaller-font-size);
     }
 
-    &-img{
+    &-img {
         transition: $img-transition;
 
-        &:hover{
+        &:hover {
             transform: $img-scale;
         }
     }
@@ -44,7 +44,7 @@
 }
 
 
-.swiper-container-3d .swiper-slide-shadow-left ,
+.swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right {
     background-image: none;
 }

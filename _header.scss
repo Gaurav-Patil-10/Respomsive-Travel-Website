@@ -17,7 +17,7 @@
 
     &-logo,
     &-toggle {
-        color: $white-color;
+        color: var(--white-color);
     }
 
     &-logo {
@@ -40,12 +40,12 @@
     }
 
     &-link{
-        color: $text-color-light;
+        color: var(--text-color-light);
         font-weight: $font-semi-bold;
         text-transform: uppercase;
 
         &:hover{
-            color: $text-color;
+            color: var(--text-color);
         }
     }
 
@@ -54,7 +54,7 @@
         top: 0.75rem;
         right: 1rem;
         font-size: 1.5rem;
-        color: $title-color;
+        color: var(--title-color);
         cursor: pointer;
     }
 
@@ -68,12 +68,12 @@
 
         &-menu {
             position: fixed;
-            background-color: $body-color;
+            background-color: var(--body-color);
             top: 0;
             right: -100rem;
             width: 70%;
             height: 100%;
-            box-shadow: -1px 0 4px hsla($hue-color, 64%, 15%, .15);
+            box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, .15);
             padding: 3rem;
             transition: .4s;
         }
@@ -88,11 +88,11 @@
 
 
 .scroll-header{
-    background-color: $body-color;
-    box-shadow: 0 0 4px hsla($hue-color, 64%, 15%, .15);
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, .15);
 
     & .nav-logo , & .nav-toggle{
-        color: $title-color;
+        color: var(--title-color);
     }
 }
 

@@ -20,7 +20,7 @@
 
     &-data{
         &-subtitle , &-title {
-            color: $white-color;
+            color: var(--white-color);
         }
 
         &-subtitle{
@@ -37,8 +37,8 @@
     }
 
     &-info{
-        color: $white-color;
-        background-color: $first-color;
+        color: var(--white-color);
+        background-color: var(--first-color);
         display: flex;
         padding: 1.5rem 1rem;
         align-items: center;
@@ -79,7 +79,7 @@
         row-gap: 1.5rem;
 
         &-link{
-            color: $white-color;
+            color: var(--white-color);
             font-size: 1.2rem;
             width: max-content;
         }

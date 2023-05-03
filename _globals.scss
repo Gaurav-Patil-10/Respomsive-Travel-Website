@@ -15,15 +15,15 @@ body {
     margin: $header-height 0 0 0;
     font-family: $body-font;
     font-size: var(--normal-font-size);
-    background-color: $body-color;
-    color: $text-color;
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
 
 h1,
 h2,
 h3 {
-    color: $title-color;
+    color: var(--title-color);
     font-weight: $font-semi-bold;
     font-family: $title-font;
 }
@@ -65,7 +65,7 @@ input {
 
 .section-title {
     font-size: var(--h2-font-size);
-    color: $title-color;
+    color: var(--title-color);
     text-align: center;
     text-transform: capitalize;
     margin-bottom: var(--mb-2);
@@ -83,14 +83,14 @@ input {
 
 .button{
     display: inline-block;
-    background-color: $first-color;
-    color: $white-color;
+    background-color: var(--first-color);
+    color: var(--white-color);
     padding: 1rem 2rem;
     font-weight: $font-semi-bold;
     transition: .3s;
 
     &:hover{
-        background-color: $first-color-alt;
+        background-color: var(--first-color-alt);
     }
 
     &--flex{
@@ -113,3 +113,89 @@ input {
 
 
 }
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    padding: .5rem;
+    opacity: .9;
+    display: flex;
+    z-index: $z-tooltip;
+    transition: .4s;
+
+    &:hover{
+        background-color: var(--first-color-alt);
+        opacity: 1;
+    }
+
+    &-icon{
+        color: var(--white-color);
+    }
+}
+
+
+.show-scroll{
+    bottom: 5rem;
+}
+
+
+// show sections active link
+
+.active-link{
+    position: relative;
+    color: hsl(190 , 64%, 18%);
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: var(--title-color);
+        width: 100%;
+        height: 2px;
+        bottom: -.75rem;
+        left: 0;
+    }
+}
+
+// scroll bar
+
+::-webkit-scrollbar{
+    width: 0.60rem;
+    background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color-light);
+}
+
+// button dark / light
+
+.nav-dark{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 4rem;
+}
+
+.change-theme , .change-theme-name{
+    color: var(--text-color);
+}
+
+.change-theme{
+    cursor: pointer;
+    font-size: 1rem;
+
+    &-name{
+        font-size:var(--small-font-size);
+    }
+}
+
+
+

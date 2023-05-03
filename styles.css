@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
 :root {
+  --hue-color: 190;
+  --first-color: hsl(var(--hue-color) , 64%, 22%);
+  --first-color-second: hsl(var(--hue-color) , 64%, 22%);
+  --first-color-alt: hsl(var(--hue-color) , 64%, 15%);
+  --title-color: hsl(var(--hue-color) , 64%, 18%);
+  --text-color: hsl(var(--hue-color) , 24%, 35%);
+  --text-color-light: hsl(var(--hue-color) , 8%, 60%);
+  --input-color: hsl(var(--hue-color) , 24%, 97%);
+  --body-color: hsl(var(--hue-color) , 100%, 99%);
+  --white-color: #FFF;
+  --scroll-bar-color: hsl(var(--hue-color) , 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color) , 12%, 75%);
+}
+
+.dark-mode {
+  --first-color-second: hsl(var(--hue-color) , 54%, 12%);
+  --title-color: hsl(var(--hue-color) , 24%, 95%);
+  --text-color: hsl(var(--hue-color) , 8%, 75%);
+  --input-color: hsl(var(--hue-color) , 29%, 16%);
+  --body-color: hsl(var(--hue-color) , 29%, 12%);
+  --scroll-bar-color: hsl(var(--hue-color) , 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color) , 12%, 36%);
+}
+
+:root {
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -34,14 +59,14 @@ body {
   margin: 3rem 0 0 0;
   font-family: "Open Sans", sans-serif;
   font-size: var(--normal-font-size);
-  background-color: hsl(190deg, 100%, 99%);
-  color: hsl(190deg, 24%, 35%);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 h1,
 h2,
 h3 {
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
   font-weight: 600;
   font-family: "Raleway", sans-serif;
 }
@@ -81,7 +106,7 @@ input {
 
 .section-title {
   font-size: var(--h2-font-size);
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
   text-align: center;
   text-transform: capitalize;
   margin-bottom: var(--mb-2);
@@ -99,14 +124,14 @@ input {
 
 .button {
   display: inline-block;
-  background-color: hsl(190deg, 64%, 22%);
-  color: #FFF;
+  background-color: var(--first-color);
+  color: var(--white-color);
   padding: 1rem 2rem;
   font-weight: 600;
   transition: 0.3s;
 }
 .button:hover {
-  background-color: hsl(190deg, 64%, 15%);
+  background-color: var(--first-color-alt);
 }
 .button--flex {
   display: flex;
@@ -120,6 +145,78 @@ input {
 }
 .button--link:hover {
   background: none;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: 0.5rem;
+  opacity: 0.9;
+  display: flex;
+  z-index: 10;
+  transition: 0.4s;
+}
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+.scrollup-icon {
+  color: var(--white-color);
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+.active-link {
+  position: relative;
+  color: hsl(190deg, 64%, 18%);
+}
+.active-link::before {
+  content: "";
+  position: absolute;
+  background-color: var(--title-color);
+  width: 100%;
+  height: 2px;
+  bottom: -0.75rem;
+  left: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+.nav-dark {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  position: absolute;
+  left: 3rem;
+  bottom: 4rem;
+}
+
+.change-theme, .change-theme-name {
+  color: var(--text-color);
+}
+
+.change-theme {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.change-theme-name {
+  font-size: var(--small-font-size);
 }
 
 .header {
@@ -138,7 +235,7 @@ input {
   align-items: center;
 }
 .nav-logo, .nav-toggle {
-  color: #FFF;
+  color: var(--white-color);
 }
 .nav-logo {
   font-weight: 600;
@@ -156,31 +253,31 @@ input {
   row-gap: 2.5rem;
 }
 .nav-link {
-  color: hsl(190deg, 8%, 60%);
+  color: var(--text-color-light);
   font-weight: 600;
   text-transform: uppercase;
 }
 .nav-link:hover {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }
 .nav-close {
   position: absolute;
   top: 0.75rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
   .nav-menu {
     position: fixed;
-    background-color: hsl(190deg, 100%, 99%);
+    background-color: var(--body-color);
     top: 0;
     right: -100rem;
     width: 70%;
     height: 100%;
-    box-shadow: -1px 0 4px hsla(190deg, 64%, 15%, 0.15);
+    box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
     padding: 3rem;
     transition: 0.4s;
   }
@@ -190,11 +287,11 @@ input {
 }
 
 .scroll-header {
-  background-color: hsl(190deg, 100%, 99%);
-  box-shadow: 0 0 4px hsla(190deg, 64%, 15%, 0.15);
+  background-color: var(--body-color);
+  box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
 }
 .scroll-header .nav-logo, .scroll-header .nav-toggle {
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
 }
 
 /* home */
@@ -216,7 +313,7 @@ input {
   row-gap: 3rem;
 }
 .home-data-subtitle, .home-data-title {
-  color: #FFF;
+  color: var(--white-color);
 }
 .home-data-subtitle {
   display: block;
@@ -229,8 +326,8 @@ input {
   margin-bottom: 2.5rem;
 }
 .home-info {
-  color: #FFF;
-  background-color: hsl(190deg, 64%, 22%);
+  color: var(--white-color);
+  background-color: var(--first-color);
   display: flex;
   padding: 1.5rem 1rem;
   align-items: center;
@@ -266,7 +363,7 @@ input {
   row-gap: 1.5rem;
 }
 .home-social-link {
-  color: #FFF;
+  color: var(--white-color);
   font-size: 1.2rem;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -323,12 +420,12 @@ input {
   left: 1rem;
 }
 .discover-title {
-  color: #FFF;
+  color: var(--white-color);
   font-size: var(--h3-font-size);
   margin-bottom: 0.25rem;
 }
 .discover-description {
-  color: #FFF;
+  color: var(--white-color);
   display: block;
   font-size: var(--smaller-font-size);
 }
@@ -432,7 +529,7 @@ input {
   justify-content: center;
 }
 .place-content, .place-title {
-  color: #FFF;
+  color: var(--white-color);
 }
 .place-content {
   position: absolute;
@@ -477,18 +574,18 @@ input {
 }
 
 .subscribe-bg {
-  background-color: hsl(190deg, 64%, 22%);
+  background-color: var(--first-color-second);
   padding: 2.5rem 0;
 }
 .subscribe-title, .subscribe-description {
-  color: #FFF;
+  color: var(--white-color);
 }
 .subscribe-description {
   text-align: center;
   margin-bottom: 2.5rem;
 }
 .subscribe-form {
-  background-color: hsl(190deg, 24%, 97%);
+  background-color: var(--input-color);
   padding: 0.5rem;
   justify-content: space-between;
   display: flex;
@@ -496,17 +593,17 @@ input {
 .subscribe-input {
   width: 70%;
   padding-right: 0.5rem;
-  background-color: hsl(190deg, 24%, 97%);
-  color: hsl(190deg, 24%, 35%);
+  background-color: var(--input-color);
+  color: var(--text-color);
 }
 .subscribe-input::-moz-placeholder {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }
 .subscribe-input:-ms-input-placeholder {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }
 .subscribe-input::placeholder {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }
 
 .sponsor-container {
@@ -543,17 +640,17 @@ input {
 }
 .footer-social {
   font-size: 1.25rem;
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
   margin-right: 1.25rem;
 }
 .footer-item {
   margin-bottom: 0.75rem;
 }
 .footer-link {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }
 .footer-link:hover {
-  color: hsl(190deg, 64%, 18%);
+  color: var(--title-color);
 }
 .footer-rights {
   display: flex;
@@ -563,7 +660,7 @@ input {
 }
 .footer-copy, .footer-terms-link {
   font-size: var(--small-font-size);
-  color: hsl(190deg, 8%, 60%);
+  color: var(--text-color-light);
 }
 .footer-terms {
   display: flex;
@@ -572,5 +669,5 @@ input {
   justify-content: center;
 }
 .footer-terms:hover {
-  color: hsl(190deg, 24%, 35%);
+  color: var(--text-color);
 }/*# sourceMappingURL=styles.css.map */

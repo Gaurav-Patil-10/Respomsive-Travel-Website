@@ -21,7 +21,7 @@
     }
 
     &-content , &-title{
-        color: $white-color;
+        color: var(--white-color);
     }
 
     &-content{
