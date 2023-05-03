@@ -8,16 +8,54 @@
         &:hover .place-img{
             transform: $img-scale;
         }
+
+        @media screen and (min-width:1024px){
+            &{
+                height: 263px;
+            }
+        }
     }
 
     &-img {
         height: 230px;
         transition: $img-transition;
+
+        @media screen and (min-width:1024px){
+            &{
+                height: 263px;
+            }
+        }
     }
 
     &-container {
         grid-template-columns: repeat(2,max-content);
         justify-content: center;
+
+        @media screen and (max-width:340px){
+            &{
+                grid-template-columns: max-content;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width:568px){
+            &{grid-template-columns: repeat(3,max-content);}
+        }
+
+        @media screen and (min-width:768px){
+            &{
+                padding-top: 2rem;
+            }
+            
+        }
+
+        @media screen and (min-width:1024px){
+            &{
+                gap: 3rem 2rem;
+            }
+        }
+
+
     }
 
     &-content , &-title{

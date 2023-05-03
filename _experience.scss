@@ -11,6 +11,17 @@
         column-gap: 1rem;
         justify-items: center;
         padding: 0 2rem;
+
+        @media screen and (max-width:340px){
+            padding: 0;
+        }
+
+        @media screen and (min-width:1024px){
+            &{
+                margin: $mb-1 0;
+                column-gap: 3.5rem;
+            }
+        }
     }
 
     &-number{
@@ -38,14 +49,56 @@
         position: absolute;
         top: 2rem;
         right: 0;
+
+        
     }
 
     &-overlay{
         overflow:$img-hidden;
+
+        @media screen and (max-width:340px){
+            &:nth-child(1){
+                width: 190px;
+            }
+        }
+
+        @media screen and (max-width:340px){
+            &:nth-child(1){
+                width: 80px;
+            }
+        }
+
+        @media screen and (max-width:1024px){
+            &:nth-child(1){
+                width: 463px;
+                margin-right: 7rem;
+            }
+
+            &:nth-child(2){
+                width: 220px;
+                margin-right: 3rem;
+            }
+        }
+
+        @media screen and (min-width:768px){
+            &:nth-child(1){
+                width: 363px;
+                margin-right: 4rem;
+            }
+
+            &:nth-child(2){
+                width: 160px;
+                margin-right: 4rem;
+            }
+        }
     }
 
 
     &-img{
+
+        @media screen and (max-width:340px){
+            padding: 0;
+        }
         &-1{
             transition: $img-transition;
 

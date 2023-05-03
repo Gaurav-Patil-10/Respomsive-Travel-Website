@@ -182,6 +182,12 @@ input {
     position: absolute;
     left: 3rem;
     bottom: 4rem;
+
+    @media screen and (min-width:768px) {
+        &{
+            position: initial;
+        }
+    }
 }
 
 .change-theme , .change-theme-name{
@@ -196,6 +202,26 @@ input {
         font-size:var(--small-font-size);
     }
 }
+
+
+@media screen and (min-width:768px){
+    body{
+        margin: 0;
+
+    }
+
+    .nav{
+        height: calc($header-height + 1.5rem);
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .container{
+        margin-inline:auto;
+    }
+}
+
 
 
 

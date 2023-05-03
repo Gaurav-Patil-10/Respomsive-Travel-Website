@@ -1,5 +1,32 @@
 .discover {
 
+    @media screen and (min-width:768px){
+        &-container{
+            width: 610px;
+            margin-inline:auto;
+            padding-top: 2rem;
+        }
+    }
+
+    @media screen and (min-width:1024px){
+        &-card{
+            width: 237px;
+        }
+
+        &-container{
+            width: 700px;
+        }
+
+        &-data{
+            left: 1.5rem;
+            bottom: 2rem;
+        }
+
+        &-title{
+            font-size: var(h2-font-size);
+        }
+    }
+
     .swiper-slide {
         width: 200px;
     }
